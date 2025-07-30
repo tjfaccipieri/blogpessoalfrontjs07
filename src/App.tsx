@@ -6,6 +6,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import Cadastro from './pages/cadastro/Cadastro';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
+import ListaTemas from './components/temas/listaTemas/ListaTemas';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/home" element={<Home />} />
+              <Route path="/temas" element={<ListaTemas />} />
             </Routes>
           </div>
           <Footer />

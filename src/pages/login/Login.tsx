@@ -8,11 +8,11 @@ import { RotatingLines } from 'react-loader-spinner';
 function Login() {
   const navigate = useNavigate();
 
-  const { handleLogin, usuario, isLoading } = useContext(AuthContext);
+  // const { handleLogin, usuario, isLoading } = useContext(AuthContext);
 
-  const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>(
-    {} as UsuarioLogin
-  );
+  const {usuario, isLoading, handleLogin} = useContext(AuthContext)
+
+  const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>({} as UsuarioLogin);
 
   useEffect(() => {
     if (usuario.token !== "") {
