@@ -1,5 +1,3 @@
-import CardTemas from "../../components/temas/cardTemas/CardTemas";
-import ListaTemas from "../../components/temas/listaTemas/ListaTemas";
 
 function Home() {
   return (
@@ -20,7 +18,6 @@ function Home() {
           </div>
         </div>
       </div>
-      <ListaTemas />
     </>
   );
 }

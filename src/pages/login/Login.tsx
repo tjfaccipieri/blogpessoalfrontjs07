@@ -40,7 +40,7 @@ function Login() {
           <div className="flex flex-col w-full">
             <label htmlFor="usuario">Usuário</label>
             <input
-              type="text"
+              type="email"
               id="usuario"
               name="usuario"
               placeholder="Usuario"
