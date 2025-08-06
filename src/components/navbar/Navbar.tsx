@@ -1,21 +1,24 @@
-import { useContext } from "react";
+import { useContext, type ReactNode } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
+import { ToastAlerta } from "../../utils/ToastAlerta";
 
 function Navbar() {
 
   const navigate = useNavigate()
 
-  const {handleLogout} = useContext(AuthContext)
+  const {handleLogout, usuario} = useContext(AuthContext)
 
   function logout() {
-    alert('Fica, vai ter bolo...')
+    ToastAlerta('Fica, vai ter bolo...', 'info')
     handleLogout()
     navigate('/')
   }
 
-  return (
-    <>
+  let navbarComponent: ReactNode
+
+  if (usuario.token !== '') {
+    navbarComponent = (
       <div
         className="w-full flex justify-center py-4 bg-sky-900 text-white"
       >
@@ -30,6 +33,12 @@ function Navbar() {
           </div>
         </div>
       </div>
+    )
+  }
+
+  return (
+    <>
+      {navbarComponent}
     </>
   );
 }

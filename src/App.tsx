@@ -14,6 +14,7 @@ import FormPostagem from './components/postagens/formPostagem/FormPostagem';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 import Perfil from './pages/perfil/Perfil';
 import PerfilPlus from './pages/perfilPlus/PerfilPlus';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <AuthProvider>
         {/* ó, aqui dentro, vai rolar navegação */}
         <BrowserRouter>
+          <ToastContainer />
           <Navbar />
           <div className="min-h-[80vh]">
             {/* ó, aqui são as rotas unicas */}
